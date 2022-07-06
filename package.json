@@ -1,0 +1,24 @@
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@typegoose/typegoose": "^9.9.0",
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.31",
+    "@types/node-fetch": "^2.6.2",
+    "abort-controller": "^3.0.0",
+    "axios": "^0.27.2",
+    "cheerio": "1.0.0-rc.5",
+    "https-proxy-agent": "^5.0.1",
+    "mongoose": "^6.4.0",
+    "mongoose-findorcreate": "^3.0.0",
+    "node-fetch": "2"
+  },
+  "scripts": {
+    "parse": "yarn build-ts && node dist/parser.js",
+    "build-ts": "tsc --skipLibCheck",
+    "proxy": "yarn build-ts && node dist/proxy/checkProxy.js"
+  }
+}
